@@ -1,23 +1,34 @@
-Generic Concurrent Real-Time Data Pipeline
+# GENERIC CONCURRENT REAL-TIME DATA PIPELINE
 
-A configurable, multiprocessing-based pipeline for real-time data ingestion, processing, and visualization.
-The system is fully domain-agnostic and driven entirely by config.json
+> A configurable, multiprocessing-based pipeline for real-time data ingestion, processing, and visualization.
+> Fully domain-agnostic and driven by `config.json`.
 
-Features
-Config-driven execution (no hardcoded dataset logic)
-Multiprocessing with parallel core workers
-Real-time streaming using bounded queues
-Cryptographic signature verification
-Running average
-Backpressure handling
-Telemetry dashboard using Observer Pattern
+---
 
-Architecture
-Input → Raw Queue → Core Workers (Parallel) → Processed Queue → Output Dashboard
-↑
-Telemetry Monitor
+## FEATURES
 
-Notes
-Works with unseen datasets
-Modules are fully decoupled
-Ready for evaluation
+* **Config-driven execution** (no hardcoded logic)
+* **Multiprocessing** with parallel core workers
+* **Real-time streaming** using bounded queues
+* **Cryptographic signature verification**
+* **Running average (sliding window)**
+* **Backpressure handling**
+* **Telemetry dashboard (Observer Pattern)**
+
+---
+
+## ARCHITECTURE
+
+```text
+Input → Raw Queue → Core Workers → Processed Queue → Output Dashboard
+                              ↑
+                      Telemetry Monitor
+```
+
+---
+
+## NOTES
+
+* Works with unseen datasets
+* Fully decoupled modules
+* Evaluation-ready
